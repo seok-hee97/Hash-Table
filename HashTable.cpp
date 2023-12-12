@@ -139,6 +139,7 @@ void free_overflow_buckets(HashTable *table)
     free(buckets);
 }
 
+//Hash-Table&Item create.  
 Ht_item *create_item(char *key, char *value)
 {
     // Creates a pointer to a new HashTable item.
@@ -150,6 +151,7 @@ Ht_item *create_item(char *key, char *value)
     return item;
 }
 
+//memory allocate | size, count, items
 HashTable *create_table(int size)
 {
     // Creates a new HashTable.
@@ -166,6 +168,7 @@ HashTable *create_table(int size)
     return table;
 }
 
+//Write functions that free up a table item and the whole table.
 void free_item(Ht_item *item)
 {
     // Frees an item.
